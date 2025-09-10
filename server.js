@@ -5,9 +5,12 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const PORT = process.env.PORT || 5000; // Use environment PORT for deployment
+const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Use environment variable for CORS (safe for frontend)
+const FRONTEND_URL = process.env.FRONTEND_URL || "*";
+app.use(cors({ origin: FRONTEND_URL }));
+
 app.use(express.json());
 
 // Health check route
@@ -46,5 +49,5 @@ app.post("/upload", upload.array("files", 10), (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`✅ Server running on ${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
