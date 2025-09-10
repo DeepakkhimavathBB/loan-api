@@ -1,0 +1,4 @@
+﻿OrderID,OrderDateText,ProductID,CustomerName,Region,Amount,Jan,Feb,Mar
+1001,20250901,2001,Asha Kapoor,Mumbai,"₹ 12,500",10,12,8
+1002,20250903,2002,Rahul Sharma,Delhi,"₹ 9,750",5,7,9
+1003,20250905,2001,Priya Verma,Bangalore,"₹ 15,000",7,9,6
